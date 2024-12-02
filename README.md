@@ -71,7 +71,6 @@ The database contains the following tables:
   - **expenses**
   - **income**
 
-Update the `config.py` file with your database credentials.
 
 ### 5. Run the Application
 
@@ -106,10 +105,3 @@ Explore the complete source code of this project on GitHub:
 
 [GitHub Repo Link](https://github.com/alkeshlajurkar/FinTracker)
 
-
-
-**Happy Finance Tracking! 🚀**
-
----
-
-This is the text formatted as you requested. You can now copy and paste this into your `README` file.
