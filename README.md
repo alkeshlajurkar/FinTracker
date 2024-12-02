@@ -4,17 +4,18 @@ Welcome to **FinTracker**, a powerful personal income and expense management app
 
 ## 🔑 Key Features
 
-### ✍️ **CRUD Operations**
+### 1] **CRUD Operations**
 - Add, update, and delete income and expense transactions effortlessly.
 
-### 🔐 **Secure Data Management**
+### 2] **Secure Data Management**
 - Data is securely stored and managed using **MySQL**.
 
-### 🌐 **Full-Stack Development**
+### 3] **Full-Stack Development**
 - The application is built using **Flask** for backend logic, and **HTML** & **CSS** for a responsive frontend interface.
 
-### 📊 **Finance Insights**
+### 4] **Finance Insights**
 - Track your expenses, income, and visualize your financial statistics easily.
+  
 
 ## 💻 Tech Stack
 
