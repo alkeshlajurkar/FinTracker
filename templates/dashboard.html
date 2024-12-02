@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<style>
+h1 {
+  font-family: 'Poppins', sans-serif; 
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-transform: none;
+}
+
+</style>
+<body>
+    <!-- Menu -->
+    <header>
+        <div class="menu-bar">
+            <div class="menu-title">
+                <h1>FinTracker</h1>
+            </div>
+            <ul class="menu-items">
+                <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('income') }}">Income</a></li>
+                <li><a href="{{ url_for('expense') }}">Expense</a></li>
+                <li><a href="{{ url_for('statistics') }}">Statistics</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </div>
+        
+    </header>
+
+    <!-- Balances Section -->
+    <main>
+        <section class="balances">
+            <div class="balance-card">
+                <h2>Total Income</h2>
+                <p>₹ {{ income }}</p>
+            </div>
+            <div class="balance-card">
+                <h2>Total Expenses</h2>
+                <p>₹ {{ expenses }}</p>
+            </div>
+            <div class="balance-card">
+                <h2>Available Balance</h2>
+                <p>₹ {{ available_balance }}</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

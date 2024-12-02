@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Income</title>
+</head>
+<body>
+    <h1>Your Income</h1>
+    <table border="1">
+        <tr>
+            <th>Amount</th>
+            <th>Source</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Transaction Date</th>
+            <th>Created At</th>
+            <th>Actions</th>
+        </tr>
+        {% for ic in income %}
+        <tr>
+            <td>{{ ic[2] }}</td>
+            <td>{{ ic[3] }}</td>
+            <td>{{ ic[4] }}</td>
+            <td>{{ ic[5] }}</td>
+            <td>{{ ic[6] }}</td>
+
+            <td>
+                <a href="/edit_income/{{ ic[0] }}">Edit</a> |
+                <a href="/delete_income/{{ ic[0] }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Heading styles */
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 20px 0; 
+            font-size: 30px; 
+            background-color: #fff; 
+            padding: 15px 0; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            border-bottom: 2px solid #ddd; 
+        }
+
+        /* Chart container styles */
+        .chart-container {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            gap: 30px; 
+            margin: 20px auto; 
+            width: 90%; 
+            max-width: 1200px; 
+        }
+
+        /* Individual chart box styling */
+        .chart-box {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%; 
+            max-width: 800px; 
+            text-align: center;
+        }
+
+        /* Chart image styling */
+        .chart-box img {
+            width: 100%; 
+            max-width: 600px; 
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        }
+
+        /* Chart title styling */
+        .chart-box h3 {
+            font-size: 22px;
+            margin-bottom: 15px; 
+            color: #333;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 26px; 
+                padding: 10px 0;
+            }
+
+            .chart-box h3 {
+                font-size: 18px; 
+            }
+
+            .chart-box {
+                padding: 15px; 
+            }
+
+            .chart-box img {
+                max-width: 100%; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 22px; 
+                padding: 8px 0;
+            }
+
+            .chart-box h3 {
+                font-size: 16px; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Heading prominently displayed at the top -->
+    <h1>Statistics: Income & Expenses</h1>
+
+    <!-- Container for charts -->
+    <div class="chart-container">
+        <!-- Chart 1: Income vs Expense -->
+        <div class="chart-box">
+            <h3>Income vs Expense</h3>
+            <img src="data:image/png;base64,{{ plot_url1 }}" alt="Income vs Expense Chart">
+        </div>
+
+        <!-- Chart 2: Expense Distribution -->
+        <div class="chart-box">
+            <h3>Expense Distribution by Category</h3>
+            <img src="data:image/png;base64,{{ plot_url2 }}" alt="Expense Distribution Chart">
+        </div>
+
+        <!-- Chart 3: Income Distribution -->
+        <div class="chart-box">
+            <h3>Income Distribution by Source</h3>
+            <img src="data:image/png;base64,{{ plot_url3 }}" alt="Income Distribution Chart">
+        </div>
+    </div>
+</body>
+</html>

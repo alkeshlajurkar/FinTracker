@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Income</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>Edit Income</h2>
+        <a href="{{ url_for('dashboard') }}" class="btn btn-secondary mb-3">Back to Dashboard</a>
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="alert alert-info">
+              {% for message in messages %}
+                <p>{{ message }}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="number" class="form-control" id="amount" name="amount" value="{{ ic[1] }}" required>
+            </div>
+            <div class="form-group">
+                <label for="source">Source</label>
+                <input type="text" class="form-control" id="source" name="source" value="{{ ic[2] }}" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" name="description">{{ ic[3] }}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <input type="text" class="form-control" id="category" name="category" value="{{ ic[4] }}" required>
+            </div>
+            <div class="form-group">
+                <label for="transaction_date">Transaction Date</label>
+                <input type="date" class="form-control" id="transaction_date" name="transaction_date" value="{{ income_date }}" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Update Income</button>
+        </form>
+    </div>
+</body>
+</html>
